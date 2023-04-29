@@ -1,0 +1,89 @@
+.main__here-container {
+  margin: 0 auto;
+  width: 250px;
+}
+
+.main__here-card {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+}
+
+.main__here-title {
+  color: rgba(141, 129, 172, 1);
+  font-family: Montserrat;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-bottom: 36px;
+  padding-top: 32px;
+  
+}
+
+.main__here-title::before {
+  content: "<";
+
+}
+
+.main__here-title::after {
+  content: ">";
+}
+
+
+
+.img1 {
+  width: 111px;
+  
+}
+
+.img2 {
+  width: 90px;
+}
+
+.img3 {
+  width: 60px;
+}
+
+.img4 {
+  width: 71px;
+}
+
+.img1,
+.img2,
+.img3,
+.img4 {
+  margin-bottom: 36px;
+}
+
+
+.here-card-title {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-bottom: 14px;
+  
+
+}
+
+.here-card-text {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-bottom: 38px;
+}
+.here-card-text:last-child{
+  margin-bottom: 58px;
+}
+
+.main__here-banner {
+  width: 317px;
+}
