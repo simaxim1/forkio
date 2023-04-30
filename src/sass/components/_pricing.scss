@@ -1,13 +1,14 @@
 @import "../abstracts/mixins";
 @import "../abstracts/defaults";
+@import "../abstracts/variables";
 
 
 
 
 .pricing__container {
   margin: 0 auto;
-  width: 320px;
-  height: 2125px;
+  // width: 320px;
+  height: 2150px;
   background-color: #463847;
 }
 
@@ -19,7 +20,11 @@
   letter-spacing: 0px;
   text-align: center;
   color: #FFFFFF;
-  margin-bottom: 32px
+  margin: 0 auto;
+  margin-bottom: 32px;
+  width: 300px;
+  
+
 }
 
 .pricing__card-container {
