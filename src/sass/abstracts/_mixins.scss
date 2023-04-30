@@ -1,16 +1,16 @@
 @import '../abstracts/variables';
 
-<<<<<<< HEAD
-@mixin flex-centre{
-  display: flex;
-  justify-content: center;
-}
-=======
 @mixin flex-center {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-  }
+}
+
+@mixin flex-centre {
+	display: flex;
+	justify-content: center;
+}
+
   @mixin hover {
 	&:hover {
 	  & a {
@@ -24,4 +24,3 @@
 	  color: $liteVioletColor;
 	}
   }
->>>>>>> create-header_html
