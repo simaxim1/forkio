@@ -1,0 +1,339 @@
+@import './abstracts/defaults';
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+.header__button-common {
+	font-family: $fontMonserrat;
+	color: white;
+	font-size: 15px;
+	font-weight: 700;
+	background-color: $mainVioletColor;
+	width: 37.18vw;
+	height: 11.56vw;
+	border: 1px solid $mainVioletColor;
+	border-radius: 40px;
+	cursor: pointer;
+	&:hover {
+	  background-color: white;
+	  color: #8d81ac;
+	}
+	@media (min-width: $bp-tablet) {
+	  width: 145px;
+	  height: 38px;
+	}
+  }
+  
+  .header__button-common-download {
+	position: absolute;
+	bottom: -22.5px;
+	font-weight: 700;
+	font-size: 18px;
+	width: 290px;
+	height: 45px;
+	@media (min-width: $bp-tablet) {
+	  width: 390px;
+	  height: 62px;
+	  font-size: 21px;
+	  bottom: -31px;
+	}
+	@media (min-width: $bp-desktop) {
+	  width: 390px;
+	  height: 62px;
+	  font-size: 21px;
+	  bottom: -31px;
+	}
+  }
+  
+  .header__drop-menu-buttons-wrapper {
+	display: flex;
+	cursor: pointer;
+	width: 6.68vw;
+	height: 6.68vw;
+	@media (min-width: $bp-tablet) {
+	  display: none;
+	}
+	@media (min-width: $bp-desktop) {
+	  display: none;
+	}
+  }
+  .header__drop-menu-button {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+	background-color: #27262a;
+  }
+  
+  .header__drop-menu-button-line {
+	width: 6.68vw;
+	height: 3px;
+	background-color: white;
+  }
+  
+  .header__drop-menu-button-line_short {
+	width: 4.7vw;
+	height: 3px;
+	background-color: white;
+  }
+  
+  .header__drop-menu-close-button {
+	font-family: $fontMonserrat;
+	color: white;
+	font-size: 8.7vw;
+  }
+  
+  .header__drop-menu-button-not-active {
+	display: none;
+  }
+  
+  .header__mobile-drop-down-menu {
+	position: absolute;
+	top: 32.18vw;
+	width: 91.56vw;
+	height: 118.125vw;
+	background-color: #333333;
+	@media (min-width: $bp-tablet) {
+	  display: none;
+	}
+	@media (min-width: $bp-desktop) {
+	  display: none;
+	}
+  }
+  .header__mobile-drop-down-menu-item {
+	font-family: $fontMonserrat;
+	list-style: none;
+	font-weight: 400;
+	font-size: 26px;
+	line-height: 27.5vw;
+	color: #ffffff;
+	height: 27.5vw;
+	padding-left: 10.93vw;
+	border-bottom: 3px solid #3b3b3b;
+  }
+  
+  .header__mobile-drop-down-menu-item_bottom-line {
+	height: 6.375vw;
+	border: none;
+  }
+  
+  .header__menu-item-link::before {
+	content: "";
+	position: absolute;
+	display: none;
+	top: 25%;
+	width: 2.5vw;
+	height: 16.56vw;
+	background-color: $mainVioletColor;
+  }
+  .header__menu-item-link {
+	text-decoration: none;
+	position: relative;
+	&:focus .header__mobile-drop-down-menu-item {
+	  color: $mainVioletColor;
+	}
+  
+	&:focus:before {
+	  display: flex;
+	}
+  }
+  
+  .header__mobile-drop-down-menu_not-active {
+	display: none;
+  }
+  
+  .header__tablet-desktop-menu {
+	display: none;
+	flex-direction: row;
+	justify-content: space-between;
+	font-family: $fontMonserrat;
+	list-style: none;
+	font-weight: 700;
+	font-size: 16px;
+	padding-left: 13vw;
+	padding-right: 13vw;
+	@media (min-width: $bp-tablet) {
+	  display: flex;
+	  margin: 0 5%;
+	  padding: 0px;
+	}
+	@media (min-width: $bp-desktop) {
+	  display: flex;
+	  width: 517px;
+	  padding: 0px;
+	  position: absolute;
+	  left: 270px;
+	  left: calc(100vw - 885px);
+	}
+  }
+  
+  .header__tablet-desktop-menu-item-link {
+	position: initial;
+	text-decoration: none;
+	color: $mainVioletColor;
+	&:hover {
+	  color: #ffffff;
+	}
+	@media (min-width: $bp-desktop) {
+	}
+  }
+  
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    background-image: url(../img/img1.png);
+    background-position: center;
+    background-size: cover;
+    height: 224vw;
+    @media (min-width: $bp-tablet) {
+        height: 104vw;
+     
+      }
+
+      @media (min-width: $bp-desktop) {
+        height:68vw;
+        background-color: transparent;
+      }
+}
+
+.header__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color:#27262A;
+    width: 100%;
+    height: 32.18vw ;
+    padding: 0 4.7vw;
+    
+
+    @media (min-width: $bp-tablet) {
+        flex-direction: column;
+        justify-content: space-around;
+        height:15vw;
+        padding-top: 2vw;
+        padding-bottom: 1.5vw;
+      }
+
+      @media (min-width: $bp-desktop) {
+        height:8vw;
+        padding-top: 2.24vw;
+        background-color: transparent;
+      }
+}
+
+
+
+.header-mobile-menu {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+}
+
+.header__logo-link {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    &:hover .header__logo-img  {
+        background-image: url(../img/logo-hover1.svg);
+        
+    }
+
+    &:hover .header__logo-text {
+    color: white;
+    }
+    
+}
+
+.header__logo-img {
+    background-image: url(../img/Logo_1.png);
+    display: flex;
+    width: 43px;
+    height: 41px;
+}
+
+
+.header__logo-text {
+        display: none;
+    font-family: $fontLato;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    color: $mainVioletColor;
+    padding-left: 17px;
+    @media (min-width: $bp-tablet) {
+        display: flex;
+    }
+    @media (min-width: $bp-desktop) {
+        display: flex;
+}
+}
+
+
+.section-welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 6vw auto;
+    font-family: $fontMonserrat;
+    color: #fff;
+    @media (min-width: $bp-tablet) {
+        // padding-top: 1px;
+        margin-top: 1%;
+     
+      }
+
+      @media (min-width: $bp-desktop) {
+        
+      }
+}
+
+.section-welcome__app-name {
+    font-weight: 700;
+    font-size: 48px;
+    @media (min-width: $bp-tablet) {
+        font-size: 72px;
+      }
+
+      @media (min-width: $bp-desktop) {
+        font-size: 82px;
+      }
+}
+
+
+.section-welcome__app-text {
+    font-weight: 400;
+    font-size: 18px;
+    color: $mainVioletColor;
+    margin-top: 19px;
+    width: 93vw;
+    text-align: center;
+    @media (min-width: $bp-tablet) {
+        font-size: 24px;
+      }
+
+      @media (min-width: $bp-desktop) {
+        font-size: 30px;
+      }
+}
+
+.section-welcome__app-version {
+    font-weight: 400;
+    font-size: 14px;
+    color: $mainVioletColor;
+    margin-top: 14px;
+    @media (min-width: $bp-tablet) {
+        font-size: 16px;
+      }
+
+      @media (min-width: $bp-desktop) {
+        font-size: 16px;
+      }
+}
+
+
+
+
+
