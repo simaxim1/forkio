@@ -29,6 +29,17 @@
 
 }
 
+.download-text {
+  font-family: $fontMonserrat;
+  color: $mainVioletColor;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 80px;
+}
+
 .btn-wrapper {
   display: flex;
   border: 1px solid rgb(212, 212, 212);
