@@ -15,9 +15,6 @@ const hamburgerMenuItem = document.querySelectorAll(
 );
 
 hamburgerMenuWrapper.addEventListener("click", (event) => {
-  // habmurgerMenuButton.classList.toggle("header__drop-menu-button-not-active");
-  // habmurgerMenuCloseButton.classList.toggle("header__drop-menu-button-not-active");
-  // hamburgerMenu.classList.toggle("header__mobile-drop-down-menu_not-active");
   if (
     !habmurgerMenuButton.classList.contains(
       "header__drop-menu-button-not-active"
