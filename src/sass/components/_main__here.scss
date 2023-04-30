@@ -1,6 +1,14 @@
+@import"../abstracts/defaults";
+@import"../abstracts/mixins";
+@import"../abstracts/variables";
+
 .main__here-container {
   margin: 0 auto;
-  width: 320px;
+  max-width: 320px;
+
+  @media(min-width:$bp-tablet) {
+    max-width: 689px;
+  }
 }
 
 .main__here-card {
@@ -8,6 +16,14 @@
   flex-direction: column;
   justify-items: center;
   align-items: center;
+
+  @media(min-width:$bp-tablet) {
+    // flex-direction: row;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: auto auto;
+    
+  }
 }
 
 .main__here-title {
@@ -21,8 +37,12 @@
   margin: 0 auto;
   margin-bottom: 36px;
   padding-top: 32px;
-  width: 230px;
+  max-width: 230px;
+
+  @media(min-width:$bp-tablet) {
+    max-width: 430px;
   }
+}
 
 .main__here-title::before {
   content: "<";
@@ -34,7 +54,7 @@
 
 .img1 {
   width: 111px;
-  }
+}
 
 .img2 {
   width: 90px;
@@ -53,6 +73,25 @@
 .img3,
 .img4 {
   margin-bottom: 36px;
+  margin-right: 23px;
+
+  @media(min-width:$bp-tablet) {
+      // margin-bottom: 0;
+      // margin-right: 0;
+
+  }
+}
+
+.main__here-img-container {
+  width: 115px;
+  display: flex;
+  justify-items: center;
+  margin-left: 10px;
+
+  @media(min-width:$bp-tablet) {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 
@@ -64,7 +103,12 @@
   letter-spacing: 0px;
   text-align: center;
   margin-bottom: 14px;
+
+  @media(min-width:$bp-tablet) {
+    margin-bottom: 0;
+    text-align: left;
   }
+}
 
 .here-card-text {
   font-family: Lato;
@@ -74,11 +118,50 @@
   letter-spacing: 0px;
   text-align: center;
   margin-bottom: 38px;
+  color: rgba(132, 142, 151, 1);
+
+  @media(min-width:$bp-tablet) {
+
+    margin-bottom: 0;
+    text-align: left;
+    line-height: 14px;
+    // max-width: 563px;
+  }
 }
-.here-card-text:last-child{
+
+.here-card-text:last-child {
   margin-bottom: 58px;
 }
 
 .main__here-banner {
-  width: 317px;
+  max-width: 317px;
+  & img:last-child{
+    display: none;
+  }
+
+  @media(min-width:$bp-tablet) {
+    max-width: 700px;
+    
+    & img:last-child {
+        display: block;
+        padding-left: 50px;
+      }
+    & img:first-child {
+        display: none;
+      }
+  }
+}
+
+.here__card-discribe{
+  max-width: 563px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main__here-card-container{
+  max-width: 732px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto auto;
 }
