@@ -1,1 +1,6 @@
 @import '../abstracts/variables';
+
+@mixin flex-centre{
+  display: flex;
+  justify-content: center;
+}

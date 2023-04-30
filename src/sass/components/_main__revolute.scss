@@ -1,0 +1,77 @@
+.main__revolut-container{
+  width: 320px;
+}
+
+
+.main__revolut-btns {
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+
+}
+
+.btn-wrapper-symbol span {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.btn-wrapper-counter {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Lato;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+
+}
+
+.btn-wrapper {
+  display: flex;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 4px;
+  width: 108px;
+  height: 26px;
+}
+
+.btn-wrapper-symbol {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(white, rgb(236, 236, 236));
+  align-items: center;
+  width: 66px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+}
+
+.main__revolut {
+  width: 273px;
+  height: 263px;
+  margin: 0 auto;
+  margin-bottom: 88px;
+}
+
+.main__revolut-title {
+  font-family: Montserrat;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: rgba(99, 92, 115, 1);
+  text-transform: uppercase;
+  margin-bottom: 27px;
+}
+
+.main__revolut-text {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-bottom: 36px;
+}
