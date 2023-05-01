@@ -8,8 +8,26 @@
 .pricing__container {
   margin: 0 auto;
   // width: 320px;
-  height: 2150px;
+  // height: 2150px;
   background-color: #463847;
+
+
+}
+
+.pricing__card-holder {
+
+  @media(min-width:$bp-tablet) {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 25px;
+    justify-content: center;
+  }
+
+  @media(min-width:$bp-desktop) {
+    display: flex;
+    
+    justify-content: center;
+  }
 }
 
 .pricing__title {
@@ -23,12 +41,27 @@
   margin: 0 auto;
   margin-bottom: 32px;
   width: 300px;
-  
+@media(min-width:$bp-tablet) {
+  font-size: 42px;
+  line-height: 44px;
+  padding-top: 79px;
+    width: 600px;
+    margin-bottom: 39px;
+  }
+
+@media(min-width:$bp-desktop) {
+  font-size: 48px;
+  line-height: 50px;
+  padding-top: 114px;
+    width: 800px;
+    margin-bottom: 61px;
+  }
 
 }
 
 .pricing__card-container {
-  @include flex-centre
+  @include flex-centre;
+
 }
 
 .pricing__card {
@@ -39,7 +72,7 @@
 
 
 .pricing__card-customer {
-  width: 257px;
+  max-width: 257px;
   height: 97px;
   color: #fff;
   background-color: #918193;
@@ -54,11 +87,13 @@
   align-items: center;
   @include flex-centre
 }
+
 .pricing__card-customer.agency {
-  width: 299px;
+  max-width: 299px;
   height: 97px;
   color: #fff;
-  background-color: rgb(73, 49, 75);;
+  background-color: rgb(73, 49, 75);
+  ;
   // box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
   text-transform: uppercase;
   font-family: Montserrat;
@@ -79,6 +114,7 @@
   justify-items: center;
   flex-direction: column;
 }
+
 .pricing__card-terms.agency {
   width: 299px;
   height: 463px;
@@ -104,14 +140,15 @@
   font-weight: 400;
   line-height: 62px;
   letter-spacing: 0px;
-  }
+}
+
 .usd-symbol.agency {
   font-family: Montserrat;
   font-size: 82px;
   font-weight: 400;
   line-height: 84px;
   letter-spacing: 0px;
-  }
+}
 
 .twentynine {
   font-family: Montserrat;
@@ -119,21 +156,23 @@
   font-weight: 700;
   line-height: 62px;
   letter-spacing: 0px;
-  }
+}
+
 .twentynine.agency {
   font-family: Montserrat;
   font-size: 82px;
   font-weight: 700;
   line-height: 84px;
   letter-spacing: 0px;
-  }
+}
 
 .card-terms-price {
   padding-top: 30px;
   margin-bottom: 20px;
 }
+
 .card-terms-price.agency {
-  
+
   margin-bottom: 16px;
 }
 
@@ -160,6 +199,7 @@
 .card-terms-type3 {
   margin-bottom: 39px;
 }
+
 .card-terms-type3.agency {
   margin-bottom: 83px;
 }
@@ -191,14 +231,15 @@
   letter-spacing: 0px;
   text-align: center;
 }
+
 .card-terms-btn.agency {
-  
+
   width: 190px;
   height: 52px;
-  
+
   border-radius: 26px;
-  
-  
+
+
 }
 
 a {
@@ -207,4 +248,3 @@ a {
 }
 
 // ===================agency card=====================
-

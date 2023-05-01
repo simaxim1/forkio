@@ -11,7 +11,7 @@
   @include flex-centre;
   flex-wrap: wrap;
   gap: 15px;
-  
+
 
 }
 
@@ -65,10 +65,21 @@
   height: 263px;
   margin: 0 auto;
   margin-bottom: 88px;
-  
+
   @media(min-width:$bp-tablet) {
     max-width: 689px;
   }
+
+  @media(min-width:$bp-desktop) {
+    max-width: 906px;
+  }
+
+}
+
+.main__revolut-content {
+  @include flex-centre;
+  flex-direction: column;
+
 }
 
 .main__revolut-title {
@@ -82,9 +93,14 @@
   text-transform: uppercase;
   margin-bottom: 27px;
   margin-top: 44px;
+
   @media(min-width:$bp-tablet) {
-      max-width: 689px;
-    }
+    max-width: 100%;
+  }
+
+  @media(min-width:$bp-tablet) {
+    max-width: 100%;
+  }
 }
 
 .main__revolut-text {
@@ -95,9 +111,9 @@
   letter-spacing: 0px;
   text-align: center;
   margin-bottom: 36px;
-  @media(min-width:$bp-tablet) {
-      // max-width: 689px;
-      // width: 100%;
-    }
-}
 
+  @media(min-width:$bp-tablet) {
+    // max-width: 689px;
+    // width: 100%;
+  }
+}
