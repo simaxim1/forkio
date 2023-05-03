@@ -38,7 +38,6 @@ document.addEventListener("click", (event) => {
   hamburgerMenu.classList.add("header__mobile-drop-down-menu_not-active");
   habmurgerMenuCloseButton.classList.add("header__drop-menu-button-not-active");
   habmurgerMenuButton.classList.remove("header__drop-menu-button-not-active");
-  console.log(event.target);
 });
 
 hamburgerMenuWrapper.addEventListener("click", (event) => {

@@ -32,14 +32,20 @@
 }
 
 .download-text {
+  margin-top: 35px;
+  margin-bottom: 80px;
   font-family: $fontMonserrat;
   color: $mainVioletColor;
   font-weight: 400;
   font-size: 14px;
   line-height: 15px;
   text-align: center;
-  margin-top: 35px;
-  margin-bottom: 80px;
+
+  @media(min-width:$bp-desktop) {
+    padding-top: 19px;
+  }
+
+
 }
 
 .btn-wrapper {

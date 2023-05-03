@@ -55,7 +55,7 @@
 }
   
 .people__bottom-separator {
-  width: 76.5vw;
+  width: 245px;
   margin-bottom: 15px;
   height: 2px;
   text-align: center;
@@ -67,7 +67,11 @@
   .people {
     background: url(../img/feedback-section-background.png) no-repeat cover center;
   }
-  
+
+  .people__header {
+    margin-top: 87px;
+  }
+
   .people__feedback-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -80,20 +84,15 @@
     margin-top: 118.5px;
     width: 91.66%;
   }
-  
-  .people__header {
-    margin-top: 87px;
+
+  .people__bottom-separator {
+    width: 555px;
   }
+
   
 }
   
 @media (min-width: $bp-desktop) {
-  .people {
-    background: url(../img/feedback-section-background.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-  }
   
   .people__feedback-wrapper {
     display: grid;
@@ -111,7 +110,11 @@
   .people__header {
     margin-top: 108px;
   }
+
+  .people__bottom-separator {
+    width: 780px;
   
+  }
 }
   
   

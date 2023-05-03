@@ -18,7 +18,7 @@
   }
 
   @media (min-width: $bp-desktop) {
-    height:68vw;
+    height:800px;
     background-color: transparent;
   }
 }
@@ -42,7 +42,8 @@
   }
 
   @media (min-width: $bp-desktop) {
-    height:8vw;
+    width: 1100px;
+    height:0;
     padding-top: 2.24vw;
     background-color: transparent;
   }
@@ -266,8 +267,8 @@
 	  display: flex;
 	  width: 517px;
 	  padding: 0px;
-	  left: 270px;
-	  left: calc(100vw - 885px);
+	  left: 380px;
+	  // left: calc(100vw - 885px);
 	}
 }
   
@@ -294,6 +295,11 @@
     margin-top: 1%;
      
   }
+  @media (min-width: $bp-desktop) {
+    width: 1200px;
+    padding-top: 126px;
+     
+  }
 }
 
 .section-welcome__app-name {
@@ -306,6 +312,8 @@
 
   @media (min-width: $bp-desktop) {
     font-size: 82px;
+    justify-content: center;
+
   }
 }
 
