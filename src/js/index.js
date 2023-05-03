@@ -1,50 +1,50 @@
 "use strict";
 
-const hamburgerMenuWrapper = document.querySelector(
+const hiddenMenuWrapper = document.querySelector(
   ".header__drop-menu-buttons-wrapper"
 );
-const habmurgerMenuButton = document.querySelector(
+const hiddenMenuButton = document.querySelector(
   ".header__drop-menu-button "
 );
-const habmurgerMenuCloseButton = document.querySelector(
+const hiddenMenuCloseButton = document.querySelector(
   ".header__drop-menu-close-button"
 );
-const hamburgerMenu = document.querySelector(".header__mobile-drop-down-menu");
-const hamburgerMenuItem = document.querySelectorAll(
+const hiddenMenu = document.querySelector(".header__mobile-drop-down-menu");
+const hiddenMenuItem = document.querySelectorAll(
   ".header__mobile-drop-down-menu-item"
 );
 
-hamburgerMenuWrapper.addEventListener("click", (event) => {
+hiddenMenuWrapper.addEventListener("click", (event) => {
   if (
-    !habmurgerMenuButton.classList.contains(
+    !hiddenMenuButton.classList.contains(
       "header__drop-menu-button-not-active"
     )
   ) {
-    habmurgerMenuButton.classList.add("header__drop-menu-button-not-active");
-    habmurgerMenuCloseButton.classList.remove(
+    hiddenMenuButton.classList.add("header__drop-menu-button-not-active");
+    hiddenMenuCloseButton.classList.remove(
       "header__drop-menu-button-not-active"
     );
-    hamburgerMenu.classList.remove("header__mobile-drop-down-menu_not-active");
+    hiddenMenu.classList.remove("header__mobile-drop-down-menu_not-active");
   } else {
-    habmurgerMenuButton.classList.remove("header__drop-menu-button-not-active");
-    habmurgerMenuCloseButton.classList.add(
+    hiddenMenuButton.classList.remove("header__drop-menu-button-not-active");
+    hiddenMenuCloseButton.classList.add(
       "header__drop-menu-button-not-active"
     );
-    hamburgerMenu.classList.add("header__mobile-drop-down-menu_not-active");
+    hiddenMenu.classList.add("header__mobile-drop-down-menu_not-active");
   }
 });
 
 document.addEventListener("click", (event) => {
-  hamburgerMenu.classList.add("header__mobile-drop-down-menu_not-active");
-  habmurgerMenuCloseButton.classList.add("header__drop-menu-button-not-active");
-  habmurgerMenuButton.classList.remove("header__drop-menu-button-not-active");
+  hiddenMenu.classList.add("header__mobile-drop-down-menu_not-active");
+  hiddenMenuCloseButton.classList.add("header__drop-menu-button-not-active");
+  hiddenMenuButton.classList.remove("header__drop-menu-button-not-active");
 });
 
-hamburgerMenuWrapper.addEventListener("click", (event) => {
+hiddenMenuWrapper.addEventListener("click", (event) => {
   event.stopPropagation();
 });
 
-hamburgerMenu.addEventListener("click", (event) => {
+hiddenMenu.addEventListener("click", (event) => {
   event.stopPropagation();
 });
 
