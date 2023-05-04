@@ -1,0 +1,152 @@
+@import"../abstracts/defaults";
+@import"../abstracts/mixins";
+@import"../abstracts/variables";
+
+.main__revolut {
+  max-width: 273px;
+  // height: 263px;
+  margin: 0 auto;
+  margin-bottom: 88px;
+
+  @media(min-width:$bp-tablet) {
+    max-width: 689px;
+    margin-bottom: 98px;
+  }
+
+  @media(min-width:$bp-desktop) {
+    max-width: 906px;
+    margin-bottom: 57px;
+  }
+
+}
+
+
+
+.main__revolut-btns {
+
+  @include flex-centre;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.btn-wrapper-symbol span {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.btn-wrapper-counter {
+  font-size: 14px;
+  font-weight: 700;
+  font-family: Lato;
+  display: flex;
+  align-items: center;
+  padding-left: 5px;
+
+}
+
+.download-text {
+  margin-top: 35px;
+  margin-bottom: 80px;
+  font-family: $fontMonserrat;
+  color: $mainVioletColor;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  text-align: center;
+  margin-top: 35px;
+  margin-bottom: 80px;
+
+  @media(min-width:$bp-tablet) {}
+
+  @media(min-width:$bp-desktop) {
+
+    margin-top: 50px;
+    margin-bottom: 66px;
+  }
+}
+
+.btn-wrapper {
+  display: flex;
+  border: 1px solid rgb(212, 212, 212);
+  border-radius: 4px;
+  width: 108px;
+  height: 26px;
+}
+
+.btn-wrapper-symbol {
+  @include flex-centre;
+  background: linear-gradient(white, rgb(236, 236, 236));
+  align-items: center;
+  width: 66px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+}
+
+
+
+.main__revolut-content {
+  @include flex-centre;
+  flex-direction: column;
+
+}
+
+.main__revolut-title {
+  font-family: Montserrat;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 28px;
+  letter-spacing: 0px;
+  text-align: center;
+  color: rgba(99, 92, 115, 1);
+  text-transform: uppercase;
+  margin-bottom: 27px;
+
+  @media(min-width:$bp-tablet) {
+    max-width: 100%;
+    font-family: Montserrat;
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 42px;
+    letter-spacing: 0px;
+    text-align: center;
+  }
+
+  @media(min-width:$bp-desktop) {
+    max-width: 100%;
+    font-family: Montserrat;
+    font-size: 54px;
+    font-weight: 700;
+    line-height: 54px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+}
+
+.main__revolut-text {
+  font-family: Lato;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0px;
+  text-align: center;
+  margin-bottom: 36px;
+
+  @media(min-width:$bp-tablet) {
+    font-family: Lato;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: center;
+    margin-bottom: 13px;
+    max-width: 689px;
+  }
+
+  @media(min-width:$bp-desktop) {
+    max-width: 885px;
+  }
+
+}

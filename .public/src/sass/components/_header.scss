@@ -1,0 +1,347 @@
+@import './abstracts/defaults';
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+
+.header {
+  position: relative;
+  height: 224vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url(../img/img1.png);
+  background-position: center;
+  background-size: cover;
+
+  @media (min-width: $bp-tablet) {
+    height: 104vw;
+   
+  }
+
+  @media (min-width: $bp-desktop) {
+    height:800px;
+    background-color: transparent;
+  }
+}
+
+.header__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 32.18vw ;
+  padding: 0 4.7vw;
+  background-color:rgb(39, 38, 42);
+  
+
+  @media (min-width: $bp-tablet) {
+    flex-direction: column;
+    justify-content: space-around;
+    height:15vw;
+    padding-top: 2vw;
+    padding-bottom: 1.5vw;
+  }
+
+  @media (min-width: $bp-desktop) {
+    width: 1100px;
+    height:0;
+    padding-top: 2.24vw;
+    background-color: transparent;
+  }
+}
+
+.header-mobile-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__logo-link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-decoration: none;
+
+  &:hover .header__logo-img  {
+    background-image: url(../img/logo-hover1.svg);
+      
+  }
+
+  &:hover .header__logo-text {
+    color: $white;
+
+  }
+  
+}
+
+.header__logo-img {
+  display: flex;
+  width: 43px;
+  height: 41px;
+  background-image: url(../img/Logo_1.png);
+
+}
+
+.header__logo-text {
+  display: none;
+  padding-left: 17px;
+  font-family: $fontLato;
+  font-weight: 700;
+  font-size: 24px;
+  font-style: normal;
+  color: $mainVioletColor;
+
+  @media (min-width: $bp-tablet) {
+      display: flex;
+  }
+}
+
+.header__button-common {
+	width: 37.18vw;
+	height: 11.56vw;
+	font-family: $fontMonserrat;
+	font-weight: 700;
+	font-size: 15px;
+	color: $white;
+	border: 1px solid $mainVioletColor;
+	border-radius: 40px;
+	background-color: $mainVioletColor;
+	cursor: pointer;
+  
+	&:hover {
+	  background-color: $white;
+	  color: $mainVioletColor;
+	}
+
+	@media (min-width: $bp-tablet) {
+	  width: 145px;
+	  height: 38px;
+	}
+}
+  
+.header__button-common-download {
+  position: absolute;
+  width: 290px;
+  height: 45px;
+  bottom: -22.5px;
+  font-weight: 700;
+  font-size: 18px;
+
+	@media (min-width: $bp-tablet) {
+	  width: 390px;
+	  height: 62px;
+	  font-size: 21px;
+	  bottom: -31px;
+	}
+
+	// @media (min-width: $bp-desktop) {
+	//   width: 390px;
+	//   height: 62px;
+	//   font-size: 21px;
+	//   bottom: -31px;
+	// }
+}
+  
+.header__drop-menu-buttons-wrapper {
+	display: flex;
+	width: 6.68vw;
+	height: 6.68vw;
+	cursor: pointer;
+
+	@media (min-width: $bp-tablet) {
+	  display: none;
+	}
+
+	// @media (min-width: $bp-desktop) {
+	//   display: none;
+	// }
+}
+
+.header__drop-menu-button {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+	background-color: rgb(39, 38, 42);
+}
+  
+.header__drop-menu-button-line {
+	width: 6.68vw;
+	height: 3px;
+	background-color: $white;
+}
+  
+.header__drop-menu-button-line_short {
+	width: 4.7vw;
+	height: 3px;
+	background-color: $white;
+}
+  
+.header__drop-menu-close-button {
+	font-family: $fontMonserrat;
+	color: $white;
+	font-size: 8.7vw;
+
+}
+  
+.header__drop-menu-button-not-active {
+	display: none;
+}
+  
+.header__mobile-drop-down-menu {
+	position: absolute;
+	top: 32.18vw;
+	width: 91.56vw;
+	height: 118.125vw;
+	background-color: rgb(51, 51, 51);
+
+  @media (min-width: $bp-tablet) {
+    display: none;
+  }
+}
+
+.header__mobile-drop-down-menu-item {
+  height: 27.5vw;
+  padding-left: 10.93vw;
+  list-style: none;
+  font-family: $fontMonserrat;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 27.5vw;
+  color: $white;
+  border-bottom: 3px solid rgb(59, 59, 59);
+}
+  
+.header__mobile-drop-down-menu-item_bottom-line {
+	height: 6.375vw;
+	border: none;
+}
+  
+.header__menu-item-link::before {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 25%;
+  width: 2.5vw;
+  height: 16.56vw;
+  background-color: $mainVioletColor;
+
+}
+
+.header__menu-item-link {
+  position: relative;
+	text-decoration: none;
+
+	&:focus .header__mobile-drop-down-menu-item {
+	  color: $mainVioletColor;
+	}
+  
+	&:focus:before {
+	  display: flex;
+	}
+}
+  
+.header__mobile-drop-down-menu_not-active {
+	display: none;
+}
+  
+.header__tablet-desktop-menu {
+	display: none;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-left: 13vw;
+	padding-right: 13vw;
+	font-family: $fontMonserrat;
+	font-weight: 700;
+	font-size: 16px;
+	list-style: none;
+
+	@media (min-width: $bp-tablet) {
+	  display: flex;
+	  margin: 0 5%;
+	  padding: 0px;
+	}
+
+	@media (min-width: $bp-desktop) {
+	  position: absolute;
+	  display: flex;
+	  width: 517px;
+	  padding: 0px;
+	  left: 380px;
+	  // left: calc(100vw - 885px);
+	}
+}
+  
+.header__tablet-desktop-menu-item-link {
+	position: initial;
+	text-decoration: none;
+	color: $mainVioletColor;
+
+	&:hover {
+	  color: $white;
+	}
+
+}
+  
+.section-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 6vw auto;
+  font-family: $fontMonserrat;
+  color: $white;
+
+  @media (min-width: $bp-tablet) {
+    margin-top: 1%;
+     
+  }
+  @media (min-width: $bp-desktop) {
+    width: 1200px;
+    padding-top: 126px;
+     
+  }
+}
+
+.section-welcome__app-name {
+  font-weight: 700;
+  font-size: 48px;
+
+  @media (min-width: $bp-tablet) {
+    font-size: 72px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    font-size: 82px;
+    justify-content: center;
+
+  }
+}
+
+.section-welcome__app-text {
+  width: 93vw;
+  margin-top: 19px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 18px;
+  color: $mainVioletColor;
+
+  @media (min-width: $bp-tablet) {
+    font-size: 24px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    font-size: 30px;
+  }
+}
+
+.section-welcome__app-version {
+  margin-top: 14px;
+  font-weight: 400;
+  font-size: 14px;
+  color: $mainVioletColor;
+
+  @media (min-width: $bp-tablet) {
+    font-size: 16px;
+  }
+}
