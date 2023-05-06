@@ -35,7 +35,6 @@ const convertImg = () => src('src/img/**/*', { base: 'src' })
   .pipe(dest('dist'))
 
 const updateHtml = () => src('*.html')
-  // .pipe(dest('dist'))
 
 const copyStatic = () => src('src/static/**/*')
   .pipe(dest('dist/static'))
