@@ -8,6 +8,7 @@ import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
 import imageMin from 'gulp-imagemin';
 import browser from 'browser-sync';
+import ghPages from 'gulp-gh-pages';
 
 const sass = gulpSass(nodeSass);
 const browserSync = browser.create();
@@ -33,11 +34,14 @@ const convertImg = () => src('src/img/**/*', { base: 'src' })
   .pipe(imageMin())
   .pipe(dest('dist'))
 
-const copyHtml = () => src('*.html')
-  .pipe(dest('dist'))
+const updateHtml = () => src('*.html')
+  // .pipe(dest('dist'))
 
 const copyStatic = () => src('src/static/**/*')
   .pipe(dest('dist/static'))
+
+const deploy = () => src('dist/**/*')
+  .pipe(ghPages())
 
 const startWatching = () => {
   browserSync.init({
@@ -49,13 +53,14 @@ const startWatching = () => {
   watch('src/sass/**/*').on('all', series(convertCss, browserSync.reload));
   watch('src/js/**/*').on('all', series(convertJs, browserSync.reload));
   watch('src/img/**/*').on('all', series(convertImg, browserSync.reload));
-  watch('*.html').on('all', series(copyHtml, browserSync.reload));
+  watch('*.html').on('all', series(updateHtml, browserSync.reload));
   watch('src/static/**/*').on('all', series(copyStatic, browserSync.reload));
 }
 
 const build = (done) => {
-  gulp.series(cleanDist, convertCss, convertJs, convertImg, copyHtml, copyStatic)(done);  
+  gulp.series(cleanDist, convertCss, convertJs, convertImg, updateHtml, copyStatic)(done);  
 }
 
 task('build', build );
 task('dev', startWatching);
+task('deploy', deploy);
