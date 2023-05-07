@@ -80,6 +80,10 @@
     margin-top: 87px;
   }
 
+  .people__content-wrapper{
+    @include container-border;
+  } 
+
   .people__feedback-wrapper {
 
     display: grid;
