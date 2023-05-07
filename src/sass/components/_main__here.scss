@@ -11,12 +11,14 @@
 }
 
 .main__here-container {
-
+max-width: 1200px;
+min-width: 320px;
+width: 100%;
 
 
 
   @media(min-width:$bp-tablet) {
-    max-width: 100%;
+    
   }
 
   @media(min-width:$bp-desktop) {
