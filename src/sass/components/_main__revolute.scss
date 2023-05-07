@@ -2,7 +2,7 @@
 @import"../abstracts/mixins";
 @import"../abstracts/variables";
 
-.main__revolut {
+.revolut{
   width: 100%;
   
   margin-bottom: 88px;
@@ -19,11 +19,11 @@
 
 }
 
-.main__revolut-container{
+.revolut__container{
   @include container-border;
 }
 
-.main__revolut-btns {
+.revolut__btns{
 
   @include flex-centre;
   flex-wrap: wrap;
@@ -66,7 +66,7 @@
   }
 }
 
-.btn-wrapper {
+.revolut__btn-wrapper {
   display: flex;
   border: 1px solid rgb(212, 212, 212);
   border-radius: 4px;
@@ -90,7 +90,7 @@
 
 }
 
-.main__revolut-title {
+.revolut__content-title {
   font-family: Montserrat;
   font-size: 26px;
   font-weight: 700;
@@ -123,7 +123,7 @@
   }
 }
 
-.main__revolut-text {
+.revolut__content-text {
   font-family: Lato;
   font-size: 14px;
   font-weight: 400;

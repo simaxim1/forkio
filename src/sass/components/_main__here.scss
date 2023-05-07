@@ -2,14 +2,14 @@
 @import"../abstracts/mixins";
 @import"../abstracts/variables";
 
-.main__here {
+.here {
   display: block;
   font-family: Montserat;
   background-color: #F4F4F4;
   width: 100%;
 }
 
-.main__here-container {
+.here__container {
   @include container-border;
 
   @media(min-width:$bp-tablet) {
@@ -28,7 +28,7 @@
   }
 }
 
-.main__here-card {
+.here__card {
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -44,7 +44,7 @@
   }
 }
 
-.main__here-title {
+.here__title {
   display: block;
   color: rgba(141, 129, 172, 1);
   font-family: Montserrat;
@@ -68,7 +68,6 @@
     letter-spacing: 0px;
     text-align: left;
     margin-bottom: 52px;
-    /
   }
 
   @media(min-width:$bp-desktop) {
@@ -85,38 +84,38 @@
   }
 }
 
-.main__here-title::before {
+.here__title::before {
   content: "<";
 }
 
-.main__here-title::after {
+.here__title::after {
   content: ">";
 }
 
-.img1 {
+.here__card-img1 {
   width: 111px;
 }
 
-.img2 {
+.here__card-img2 {
   width: 90px;
 }
 
-.img3 {
+.here__card-img3 {
   width: 60px;
 }
 
-.img4 {
+.here__card-img4 {
   width: 71px;
 }
 
-.img1,
-.img2,
-.img3,
-.img4 {
+.here__card-img1,
+.here__card-img2,
+.here__card-img3,
+.here__card-img4 {
   margin-bottom: 36px;
 }
 
-.main__here-img-container {
+.here__card-flexcontainer {
   width: 115px;
   display: flex;
   justify-content: center;
@@ -129,7 +128,7 @@
 }
 
 
-.here-card-title {
+.here__card-title{
   font-family: Montserrat;
   font-size: 16px;
   font-weight: 400;
@@ -143,7 +142,7 @@
   }
 }
 
-.here-card-text {
+.here__card-text {
   font-family: Montserrat;
   font-size: 14px;
   font-weight: 400;
@@ -178,7 +177,7 @@
   }
 }
 
-.main__here-banner {
+.here__banner {
   display: flex;
   justify-content: end;
   grid-area: banner;
@@ -213,7 +212,7 @@
   justify-content: space-between;
 }
 
-.main__here-card-container {
+.here__card-container {
   margin: 0 auto;
   max-width: 732px;
   display: grid;
