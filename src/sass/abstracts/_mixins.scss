@@ -11,16 +11,24 @@
 	justify-content: center;
 }
 
-  @mixin hover {
+@mixin hover {
 	&:hover {
-	  & a {
-		color: $whiteColor;
-	  }
+		& a {
+			color: $whiteColor;
+		}
 	}
-  }
-  @mixin hover-button {
+}
+
+@mixin hover-button {
 	&:hover {
-	  background-color: $whiteColor;
-	  color: $liteVioletColor;
+		background-color: $whiteColor;
+		color: $liteVioletColor;
 	}
-  }
+}
+
+@mixin container-border {
+	min-width: 320px;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}

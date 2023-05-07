@@ -6,12 +6,12 @@
   display: block;
   font-family: Montserat;
   padding: 0 10px;
-  max-width: 1200px;
-  margin: 0 auto;
+  background-color: #F4F4F4;
+  width: 100%;
 }
 
 .main__here-container {
-
+  @include container-border;
 
 
 
@@ -20,7 +20,8 @@
   }
 
   @media(min-width:$bp-desktop) {
-    background-color: #F4F4F4;
+    @include container-border;
+    
     padding-top: 100px;
     display: grid;
     grid-template-areas:

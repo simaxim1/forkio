@@ -13,15 +13,12 @@
   font-weight: 700;
   font-size: 16px;
   color: rgb(255, 255, 255);
-  min-width: 320px;
+  // min-width: 320px;
   
 }
 
 .people__wrapper{
-max-width: 1200px;
-min-width: 320px;
-  width: 100%;
-  margin: 0 auto;
+@include container-border
 }
 
 .people__header {
