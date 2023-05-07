@@ -264,10 +264,11 @@
 	@media (min-width: $bp-desktop) {
 	  position: absolute;
 	  display: flex;
-	  width: 517px;
+	  max-width: 517px;
+    width: 100%;
 	  padding: 0px;
-	  left: 10%;
-	  left: calc(100vw - 820px);
+	  right: 225px;
+  
 	}
 }
   
