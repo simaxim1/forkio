@@ -136,12 +136,6 @@
 	  bottom: -31px;
 	}
 
-	// @media (min-width: $bp-desktop) {
-	//   width: 390px;
-	//   height: 62px;
-	//   font-size: 21px;
-	//   bottom: -31px;
-	// }
 }
   
 .header__drop-menu-buttons-wrapper {
@@ -218,12 +212,14 @@
 	height: 6.375vw;
 	border: none;
 }
-  
+
 .header__menu-item-link::before {
   content: "";
   position: absolute;
   display: none;
-  top: 25%;
+  // top: 2%;
+  left: -42.5px;
+  bottom: -20px;
   width: 2.5vw;
   height: 16.56vw;
   background-color: $mainVioletColor;
@@ -234,7 +230,7 @@
   position: relative;
 	text-decoration: none;
 
-	&:focus .header__mobile-drop-down-menu-item {
+	&:focus {
 	  color: $mainVioletColor;
 	}
   
