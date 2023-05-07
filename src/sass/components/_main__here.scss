@@ -5,12 +5,15 @@
 .main__here {
   display: block;
   font-family: Montserat;
+  padding: 0 10px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .main__here-container {
 
-  margin: 0 auto;
-  max-width: 100%;
+
+
 
   @media(min-width:$bp-tablet) {
     max-width: 100%;
@@ -116,15 +119,15 @@
 .img3,
 .img4 {
   margin-bottom: 36px;
-  margin-right: 23px;
+  // margin-right: 23px;
 
 }
 
 .main__here-img-container {
   width: 115px;
   display: flex;
-  justify-items: center;
-  margin-left: 10px;
+  justify-content: center;
+
 
   @media(min-width:$bp-tablet) {
     display: flex;

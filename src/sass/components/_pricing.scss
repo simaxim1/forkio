@@ -3,24 +3,11 @@
 @import "../abstracts/variables";
 
 
-.pricing__container {
-  margin: 0 auto;
+.pricing__wrapper {
+
   background-color: #463847;
-}
-
-.pricing__card-holder {
-
-  @media(min-width:$bp-tablet) {
-    display: grid;
-    grid-template-columns: auto auto;
-    column-gap: 25px;
-    justify-content: center;
-  }
-
-  @media(min-width:$bp-desktop) {
-    display: flex;
-    justify-content: center;
-  }
+  padding: 0 10px;
+  width: 100%;
 }
 
 .pricing__title {
@@ -39,7 +26,8 @@
     font-size: 42px;
     line-height: 44px;
     padding-top: 79px;
-    width: 600px;
+    max-width: 600px;
+    width: 100%;
     margin-bottom: 39px;
   }
 
@@ -47,26 +35,71 @@
     font-size: 48px;
     line-height: 50px;
     padding-top: 114px;
-    width: 800px;
+    max-width: 800px;
+    width: 100%;
     margin-bottom: 61px;
   }
-
 }
 
-.pricing__card-container {
-  @include flex-centre;
+.pricing__card-holder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  max-width: 1200px;
+  margin: 0 auto;
 
+  @media(min-width:$bp-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    column-gap: 25px;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  @media(min-width:$bp-desktop) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
+
 
 .pricing__card {
   @include flex-centre;
   flex-direction: column;
   margin-bottom: 18px;
+  min-width: 200px;
+  max-width: 257px;
+  width: 100%;
+
+  @media(min-width:$bp-tablet) {
+    // width: 100%;
+  }
+
+  @media(min-width:$bp-desktop) {
+    // width: 100%;
+  }
+}
+
+.pricing__card.agency {
+  margin-bottom: 18px;
+  min-width: 220px;
+  max-width: 299px;
+  width: 100%;
+
+  @media(min-width:$bp-tablet) {
+    margin-right: 40px;
+    justify-items: center;
+  }
+
+  @media(min-width:$bp-desktop) {
+    margin-right: 0px;
+    justify-items: center;
+  }
 }
 
 
 .pricing__card-customer {
-  max-width: 257px;
   height: 97px;
   color: #fff;
   background-color: #918193;
@@ -82,8 +115,7 @@
 }
 
 .pricing__card-customer.agency {
-  max-width: 299px;
-  height: 97px;
+  height: 111px;
   color: #fff;
   background-color: rgb(73, 49, 75);
   text-transform: uppercase;
@@ -94,11 +126,9 @@
   letter-spacing: 0px;
   text-align: center;
   align-items: center;
-  @include flex-centre
 }
 
 .pricing__card-terms {
-  width: 257px;
   height: 360px;
   background-color: #817083;
   display: flex;
@@ -107,7 +137,6 @@
 }
 
 .pricing__card-terms.agency {
-  width: 299px;
   height: 463px;
   background-color: #513853;
   display: flex;
